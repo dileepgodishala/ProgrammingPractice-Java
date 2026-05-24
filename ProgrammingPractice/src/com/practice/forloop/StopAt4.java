@@ -1,0 +1,15 @@
+package com.practice.forloop;
+
+public class StopAt4 {
+
+	public static void main(String[] args) {
+		for(int i=10;i>=1;i--) {
+			if(i==4) {
+				break;
+			}
+			System.out.println(i);
+		}
+
+	}
+
+}
