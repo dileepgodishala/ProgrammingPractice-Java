@@ -1,13 +1,12 @@
 package com.practice.seismic;
 
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 
 public class RemoveDuplicateCharactersFromAString {
 
 	public static void main(String[] args) {
 		
-		String name = "Dileep Godishala".toUpperCase().replace(" ", "");
+		String name = "Dileep Godishala".toUpperCase();
 		
 		String finalString = "";
 		
@@ -25,14 +24,20 @@ public class RemoveDuplicateCharactersFromAString {
 		System.out.println("Without duplicates: " + finalString);
 		
 		
-//		//Approach 2
-//		StringBuilder sb = new StringBuilder();
-//		
-//		for(int i=0; i<name.length(); i++) {
-//			
-//			
-//			
-//		}
+		//Approach 2
+		StringBuilder sb = new StringBuilder();
+		String result = "";
+		
+		for(int i=0; i<name.length(); i++) {
+			
+			char c = name.charAt(i);
+			
+			if(c != ' ' && result.indexOf(c) == -1) {
+				result += c;
+			}
+		}
+		
+		System.out.println(result);
 		
 		
 		
